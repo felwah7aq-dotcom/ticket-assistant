@@ -1,0 +1,8 @@
+numpy
+pandas
+scikit-learn
+matplotlib
+gradio
+# only needed for the real embedding model (multilingual-e5-small); the offline fallback does not need them
+sentence-transformers
+torch

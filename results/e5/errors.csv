@@ -1,0 +1,73 @@
+﻿source,id,text,true,pred,conf,sim,answered,lang,dialect,category
+test,10007,السلام عليكم، الكارت اترفض بس الفلوس اتخصمت من حسابي للأوردر #34264,payment_failed,track_refund,0.407,0.938,False,ar,egy,ERROR_CAUGHT_BY_ABSTAIN | low-resource dialect (fewer training templates) | confusion payment_failed -> track_refund
+test,10012,عاجل: فيه غلط في اسم الشارع بعنوان 92981، صححوه لو سمحتوا شكرا.,change_address,payment_failed,0.419,0.925,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion change_address -> payment_failed
+test,10022,السلام عليكم، الكندرة من الطلب ٢٤٩٨٨ خربان ووقف بعد يوم جزاكم الله خير.,damaged_item,damaged_item,0.53,0.961,False,ar,lev,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,10084,السماعة جاي بضمان؟,product_question,product_question,0.969,0.856,False,ar,egy,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates) | very short / little context
+test,10095,مساء الخير الكارت اترفض بس الفلوس اتخصمت من حسابي للأوردر #61578 ارجو المساعدة,payment_failed,track_refund,0.428,0.946,False,ar,egy,ERROR_CAUGHT_BY_ABSTAIN | low-resource dialect (fewer training templates) | confusion payment_failed -> track_refund
+test,10152,الكارت اترفض بس الفلوس اتخصمت من حسابي للأوردر ٦٨٤٥٤,payment_failed,payment_failed,0.405,0.933,False,ar,egy,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,10169,مرحبا، أرجو إفادتي بحالة التوصيل للطلب 64995. ارجو المساعدة.,track_order,change_address,0.532,0.95,False,ar,msa,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> change_address
+test,10193,عاجل: أرجو إفادتي بحالة التوصيل للطلب ٣٦١٨٩. ارجو المساعدة.,track_order,cancel_order,0.358,0.963,False,ar,msa,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> cancel_order
+test,10269,الكارت اترفض بس الفلوس اتخصمت من حسابي للأوردر 85236 جزاكم الله خير.,payment_failed,payment_failed,0.502,0.946,False,ar,egy,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,10291,الطلب تأخر كتير والتتبع ما عم يتغير شكرا.,track_order,track_order,0.469,0.95,False,ar,lev,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,10323,ارجو افادتي بحاله التوصيل للطلب ٣٣٩٩٤.,track_order,cancel_order,0.407,0.946,False,ar,msa,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> cancel_order
+test,10387,أرجو إفادتي بحالة التوصيل للطلب #48825. ارجو المساعدة.,track_order,change_address,0.599,0.95,True,ar,msa,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> change_address
+test,10391,مرحبا، طلبت مقاس غلط من الساعه الذكيه ابغي الغيه الحين شكرا.,cancel_order,damaged_item,0.473,0.953,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion cancel_order -> damaged_item
+test,10441,السلام عليكم، الكارت اترفض بس الفلوس اتخصمت من حسابي للأوردر #37822,payment_failed,payment_failed,0.345,0.931,False,ar,egy,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,10471,الطلب تأخر كتير والتتبع ما عم يتغير ارجو المساعده.,track_order,track_order,0.484,0.935,False,ar,lev,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,10499,السلام عليكم قلتوا استلمتوا المرتجع بس ما شفت فلوسي في حسابي شكرا,track_refund,login_problem,0.303,0.934,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> login_problem
+test,10582,طلبت مقاس غلط من الخلاط ابغى الغيه الحين,cancel_order,damaged_item,0.68,0.936,True,ar,gulf,CONFIDENT_ERROR (auto-reply would be wrong) | confusion cancel_order -> damaged_item
+test,10606,ارجو افادتي بحاله التوصيل للطلب 47632.,track_order,change_address,0.557,0.952,True,ar,msa,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> change_address
+test,10614,مرحبا، كيف بعدل عنوان الشحن لطلب موجود؟ شكرا.,change_address,change_address,0.429,0.976,False,ar,lev,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,10666,عاجل: قلتوا استلمتوا المرتجع بس ما شفت فلوسي في حسابي شكرا.,track_refund,login_problem,0.337,0.946,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> login_problem
+test,10726,عاجل: طلبت مقاس غلط من الخلاط ابغي الغيه الحين جزاكم الله خير.,cancel_order,damaged_item,0.409,0.956,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion cancel_order -> damaged_item
+test,10737,مساء الخير، أرجو إفادتي بحالة التوصيل للطلب 47040. جزاكم الله خير.,track_order,change_address,0.487,0.943,False,ar,msa,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> change_address
+test,10752,I changed my mind Cancel #99631 and stop the shipment Please help,cancel_order,cancel_order,0.486,0.927,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,10753,ارجو افادتي بحالة التوصيل للطلب 93122.,track_order,change_address,0.518,0.946,False,ar,msa,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> change_address
+test,10763,أرجو إفادتي بحالة التوصيل للطلب 93621. ارجو المساعدة.,track_order,change_address,0.481,0.954,False,ar,msa,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> change_address
+test,10796,عاجل: طلبت مقاس غلط من phone case ابغى الغيه الحين جزاكم الله خير.,cancel_order,cancel_order,0.402,0.945,False,ar,gulf,OVER_ABSTAIN (correct but sent to human) | code-switching AR+EN
+test,10865,مرحبا، الطلب تأخر كتير والتتبع ما عم يتغير,track_order,track_order,0.483,0.945,False,ar,lev,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,10925,الكارت اترفض بس الفلوس اتخصمت من حسابي للأوردر 34073 شكرا.,payment_failed,payment_failed,0.359,0.946,False,ar,egy,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,10944,السلام عليكم، فيه قطع ناقصه بالصندوق والجوال مو كامل ارجو المساعده.,damaged_item,damaged_item,0.499,0.941,False,ar,gulf,OVER_ABSTAIN (correct but sent to human)
+test,11016,أرجو إفادتي بحالة التوصيل للطلب #32223 شكرا,track_order,change_address,0.509,0.948,False,ar,msa,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> change_address
+test,11067,عاجل: الكارت اترفض بس الفلوس اتخصمت من حسابي للاوردر 89561,payment_failed,payment_failed,0.336,0.934,False,ar,egy,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,11084,الطلب تأخر كتير والتتبع ما عم يتغير شكرا,track_order,track_order,0.518,0.931,False,ar,lev,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,11155,السلام عليكم، فيه غلط في اسم الشارع بعنوان ٨٨٢١٥، صححوه لو سمحتوا جزاكم الله خير.,change_address,change_address,0.503,0.932,False,ar,gulf,OVER_ABSTAIN (correct but sent to human)
+test,11252,مرحبا قلتوا استلمتوا المرتجع بس ما شفت فلوسي في حسابي جزاكم الله خير,track_refund,payment_failed,0.422,0.935,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> payment_failed
+test,11270,مرحبا فيه قطع ناقصه بالصندوق والجوال مو كامل شكرا,damaged_item,damaged_item,0.348,0.936,False,ar,gulf,OVER_ABSTAIN (correct but sent to human)
+test,11365,قلتوا استلمتوا المرتجع بس ما شفت فلوسي في حسابي جزاكم الله خير.,track_refund,payment_failed,0.394,0.925,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> payment_failed
+test,11382,مساء الخير، ارجو افادتي بحالة التوصيل للطلب 94654. جزاكم الله خير.,track_order,cancel_order,0.571,0.946,True,ar,msa,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> cancel_order
+test,11392,عاجل: فيه غلط في اسم الشارع بعنوان 10902، صححوه لو سمحتوا,change_address,change_address,0.533,0.915,False,ar,gulf,OVER_ABSTAIN (correct but sent to human)
+test,11395,قلتوا استلمتوا المرتجع بس ما شفت فلوسي في حسابي شكرا.,track_refund,login_problem,0.321,0.937,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> login_problem
+test,11408,طلبت مقاس غلط من اللابتوب ابغى الغيه الحين جزاكم الله خير,cancel_order,cancel_order,0.432,0.965,False,ar,gulf,OVER_ABSTAIN (correct but sent to human)
+test,11434,مرحبا طلبت مقاس غلط من الساعة الذكية ابغى الغيه الحين,cancel_order,cancel_order,0.521,0.953,False,ar,gulf,OVER_ABSTAIN (correct but sent to human)
+test,11440,طلبت مقاس غلط من الشنطة ابغى الغيه الحين,cancel_order,cancel_order,0.497,0.932,False,ar,gulf,OVER_ABSTAIN (correct but sent to human)
+test,11545,مساء الخير طلبت مقاس غلط من الخلاط ابغى الغيه الحين,cancel_order,damaged_item,0.717,0.944,True,ar,gulf,CONFIDENT_ERROR (auto-reply would be wrong) | confusion cancel_order -> damaged_item
+test,11600,السلام عليكم أرجو إفادتي بحالة التوصيل للطلب 93431,track_order,change_address,0.502,0.944,False,ar,msa,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> change_address
+test,11607,السلام عليكم، فيه قطع ناقصة بالصندوق والقلاية مو كامل شكرا.,damaged_item,damaged_item,0.506,0.94,False,ar,gulf,OVER_ABSTAIN (correct but sent to human)
+test,11620,عاجل ارجو افادتي بحاله التوصيل للطلب 57632 ارجو المساعده,track_order,cancel_order,0.456,0.943,False,ar,msa,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> cancel_order
+test,11710,مساء الخير، قلتوا استلمتوا المرتجع بس ما شفت فلوسي في حسابي,track_refund,login_problem,0.358,0.938,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> login_problem
+test,11720,السلام عليكم، قلتوا استلمتوا المرتجع بس ما شفت فلوسي في حسابي,track_refund,login_problem,0.38,0.921,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> login_problem
+test,11727,السلام عليكم، الطلب تأخر كتير والتتبع ما عم يتغير شكرا.,track_order,track_order,0.406,0.95,False,ar,lev,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,11807,السلام عليكم، ارجو افادتي بحالة التوصيل للطلب ٢٦٦٣٠. جزاكم الله خير.,track_order,change_address,0.365,0.956,False,ar,msa,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> change_address
+test,11810,الكارت اترفض بس الفلوس اتخصمت من حسابي للاوردر ٧٥١٦٤ ارجو المساعدة.,payment_failed,payment_failed,0.437,0.946,False,ar,egy,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,11831,الكارت اترفض بس الفلوس اتخصمت من حسابي للأوردر #80988,payment_failed,payment_failed,0.318,0.938,False,ar,egy,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,11834,عاجل كيف بعدل عنوان الشحن لطلب موجود ارجو المساعدة,change_address,track_order,0.532,0.963,False,ar,lev,ERROR_CAUGHT_BY_ABSTAIN | low-resource dialect (fewer training templates) | confusion change_address -> track_order
+test,11839,أرجو إفادتي بحالة التوصيل للطلب ٧٤٨٢٥ شكرا,track_order,change_address,0.428,0.965,False,ar,msa,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> change_address
+test,11931,مرحبا، كيف بعدل عنوان الشحن لطلب موجود؟ جزاكم الله خير.,change_address,track_order,0.486,0.973,False,ar,lev,ERROR_CAUGHT_BY_ABSTAIN | low-resource dialect (fewer training templates) | confusion change_address -> track_order
+test,11979,السلام عليكم، الطلب تأخر كتير والتتبع ما عم يتغير جزاكم الله خير.,track_order,cancel_order,0.449,0.943,False,ar,lev,ERROR_CAUGHT_BY_ABSTAIN | low-resource dialect (fewer training templates) | confusion track_order -> cancel_order
+test,11993,الكارت اترفض بس الفلوس اتخصمت من حسابي للأوردر #64306 جزاكم الله خير.,payment_failed,track_refund,0.304,0.954,False,ar,egy,ERROR_CAUGHT_BY_ABSTAIN | low-resource dialect (fewer training templates) | confusion payment_failed -> track_refund
+test,12084,قلتوا استلمتوا المرتجع بس ما شفت فلوسي في حسابي,track_refund,login_problem,0.368,0.916,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> login_problem
+test,12094,مرحبا، قلتوا استلمتوا المرتجع بس ما شفت فلوسي في حسابي شكرا.,track_refund,login_problem,0.363,0.939,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> login_problem
+test,12111,عاجل: أرجو إفادتي بحالة التوصيل للطلب ٤٩٥١٩. شكرا.,track_order,cancel_order,0.424,0.952,False,ar,msa,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> cancel_order
+test,12182,أرجو إفادتي بحالة التوصيل للطلب ٤٣٩٠٦,track_order,change_address,0.526,0.947,False,ar,msa,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> change_address
+test,12211,عاجل أرجو إفادتي بحالة التوصيل للطلب ٩٧٥٤٢,track_order,cancel_order,0.458,0.946,False,ar,msa,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> cancel_order
+test,12214,السلام عليكم، قلتوا استلمتوا المرتجع بس ما شفت فلوسي في حسابي ارجو المساعدة.,track_refund,payment_failed,0.361,0.934,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> payment_failed
+test,12245,مساء الخير، قلتوا استلمتوا المرتجع بس ما شفت فلوسي في حسابي ارجو المساعدة.,track_refund,track_order,0.28,0.943,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> track_order
+test,12246,طلبت مقاس غلط من السماعة ابغى الغيه الحين ارجو المساعدة.,cancel_order,cancel_order,0.452,0.953,False,ar,gulf,OVER_ABSTAIN (correct but sent to human)
+test,12248,أرجو إفادتي بحالة التوصيل للطلب #14095. جزاكم الله خير.,track_order,change_address,0.562,0.939,True,ar,msa,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> change_address
+test,12269,السلام عليكم، الطلب تأخر كتير والتتبع ما عم يتغير ارجو المساعدة.,track_order,track_order,0.497,0.949,False,ar,lev,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+handchecked,30,هالساعة تتحمل الماي؟ وتجي بضمان؟,product_question,product_question,0.957,,False,ar,misc,OVER_ABSTAIN (correct but sent to human) | very short / little context
+handchecked,31,هل تتوفر هذه الحقيبة بمقاسات أكبر؟,product_question,product_question,0.997,,False,ar,misc,OVER_ABSTAIN (correct but sent to human)
+handchecked,32,do you deliver the blender to Jeddah and how long does it take?,product_question,track_order,0.684,,True,en,misc,CONFIDENT_ERROR (auto-reply would be wrong) | confusion product_question -> track_order
+handchecked,41,المندوب كان وقح معي وابغى اقدم شكوى عليه,out_of_scope,damaged_item,0.668,,True,ar,misc,OUT_OF_SCOPE answered (should abstain) | CONFIDENT_ERROR (auto-reply would be wrong) | confusion out_of_scope -> damaged_item
+handchecked,44,ابغى اشتري سيارة مستعملة، عندكم؟,out_of_scope,product_question,0.914,,True,ar,misc,OUT_OF_SCOPE answered (should abstain) | CONFIDENT_ERROR (auto-reply would be wrong) | very short / little context | confusion out_of_scope -> product_question

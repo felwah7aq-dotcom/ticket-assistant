@@ -1,0 +1,216 @@
+﻿source,id,text,true,pred,conf,sim,answered,lang,dialect,category
+test,10012,عاجل: فيه غلط في اسم الشارع بعنوان 92981، صححوه لو سمحتوا شكرا.,change_address,change_address,0.679,0.639,False,ar,gulf,OVER_ABSTAIN (correct but sent to human)
+test,10023,السلام عليكم، كيف يمكنني إلغاء الطلب قبل شحنه؟ ارجو المساعدة.,cancel_order,cancel_order,0.652,0.682,False,ar,msa,OVER_ABSTAIN (correct but sent to human)
+test,10025,مرحبا، أرجو إرسال الساعه الذكيه إلى عنوان منزلي الجديد. جزاكم الله خير.,change_address,change_address,0.632,0.603,False,ar,msa,OVER_ABSTAIN (correct but sent to human)
+test,10033,الطلب تاخر كتير والتتبع ما عم يتغير ارجو المساعدة.,track_order,track_order,0.571,0.686,False,ar,lev,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,10036,"Hello, How long does a refund take? I was told 5 to 7 days.",track_refund,product_question,0.601,0.6,False,en,en,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> product_question
+test,10051,"hi, my package hasn't arrived yet, tracking says it's stuck. please help.",track_order,damaged_item,0.683,0.559,True,en,en,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> damaged_item
+test,10053,السلام عليكم، الطلب ٥٦٧٤٦ مكتوب انه انشحن بس ما تحرك من 7 ايام ارجو المساعدة.,track_order,cancel_order,0.37,0.638,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> cancel_order
+test,10064,"Hi team, The payment page shows an error when I try to pay. Thanks.",payment_failed,payment_failed,0.501,0.673,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,10078,sneakers اصلي وفيه ضمان سنه ارجو المساعده,product_question,product_question,0.608,0.645,False,ar,gulf,OVER_ABSTAIN (correct but sent to human) | code-switching AR+EN
+test,10083,"my package hasn't arrived yet, tracking says it's stuck. thanks.",track_order,damaged_item,0.726,0.535,True,en,en,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> damaged_item
+test,10109,مرحبا، الطلب #62334 مكتوب انه انشحن بس ما تحرك من 4 ايام ارجو المساعدة.,track_order,track_refund,0.374,0.557,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> track_refund
+test,10118,السلام عليكم، الطلب ٩٦٤٥٥ مكتوب انه انشحن بس ما تحرك من ٤ ايام شكرا.,track_order,track_refund,0.406,0.584,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> track_refund
+test,10140,مرحبا استلمت منتجا خاطئا طلبت الهاتف لكن وصلني شيء آخر شكرا,damaged_item,damaged_item,0.595,0.545,False,ar,msa,OVER_ABSTAIN (correct but sent to human)
+test,10148,"Hi team, I changed my mind. Cancel #24981 and stop the shipment. Please help.",cancel_order,cancel_order,0.545,0.735,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,10152,الكارت اترفض بس الفلوس اتخصمت من حسابي للأوردر ٦٨٤٥٤,payment_failed,payment_failed,0.993,0.467,False,ar,egy,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,10166,السلام عليكم، ابغى اغير رقم جوالي المسجل بس ما اقدر ادخل حسابي ارجو المساعدة.,login_problem,login_problem,0.394,0.664,False,ar,gulf,OVER_ABSTAIN (correct but sent to human)
+test,10169,مرحبا، أرجو إفادتي بحالة التوصيل للطلب 64995. ارجو المساعدة.,track_order,change_address,0.675,0.651,False,ar,msa,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> change_address
+test,10171,عاجل: الطلب #94846 مكتوب انه انشحن بس ما تحرك من 7 ايام ارجو المساعده.,track_order,cancel_order,0.412,0.57,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> cancel_order
+test,10181,The payment page shows an error when I try to pay. Thank you!,payment_failed,payment_failed,0.563,0.637,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,10186,مساء الخير، ابغى اغير رقم جوالي المسجل بس ما اقدر ادخل حسابي,login_problem,login_problem,0.496,0.603,False,ar,gulf,OVER_ABSTAIN (correct but sent to human)
+test,10193,عاجل: أرجو إفادتي بحالة التوصيل للطلب ٣٦١٨٩. ارجو المساعدة.,track_order,change_address,0.757,0.728,True,ar,msa,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> change_address
+test,10208,السلام عليكم، الطلب 82902 مكتوب انه انشحن بس ما تحرك من 2 ايام جزاكم الله خير.,track_order,track_refund,0.376,0.612,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> track_refund
+test,10210,عاجل: الطلب #61993 مكتوب انه انشحن بس ما تحرك من 2 ايام,track_order,track_refund,0.52,0.449,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> track_refund
+test,10232,headphones from order 88581 is defective and stopped working after one day Thanks,damaged_item,track_order,0.668,0.609,False,en,en,ERROR_CAUGHT_BY_ABSTAIN | confusion damaged_item -> track_order
+test,10234,hi team how long does a refund take i was told 5 to 7 days,track_refund,product_question,0.504,0.545,False,en,en,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> product_question
+test,10238,عاجل: أرجو إرسال الحاسوب المحمول إلى عنوان منزلي الجديد.,change_address,change_address,0.641,0.523,False,ar,msa,OVER_ABSTAIN (correct but sent to human)
+test,10245,"Urgent: My package hasn't arrived yet, tracking says it's stuck. Please help.",track_order,damaged_item,0.621,0.586,False,en,en,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> damaged_item
+test,10248,استلمت منتجا خاطئا، طلبت القلايه الهوائيه لكن وصلني شيء اخر. ارجو المساعده.,damaged_item,damaged_item,0.606,0.601,False,ar,msa,OVER_ABSTAIN (correct but sent to human)
+test,10263,عاجل: الطلب تأخر كتير والتتبع ما عم يتغير,track_order,track_order,0.603,0.634,False,ar,lev,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,10275,ابغى اغير رقم جوالي المسجل بس ما اقدر ادخل حسابي ارجو المساعدة.,login_problem,login_problem,0.493,0.62,False,ar,gulf,OVER_ABSTAIN (correct but sent to human)
+test,10285,"Hi, How long does a refund take? I was told 5 to 7 days. Thanks.",track_refund,product_question,0.543,0.528,False,en,en,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> product_question
+test,10288,مساء الخير، ابغى اغير رقم جوالي المسجل بس ما اقدر ادخل حسابي شكرا.,login_problem,login_problem,0.471,0.557,False,ar,gulf,OVER_ABSTAIN (correct but sent to human)
+test,10291,الطلب تأخر كتير والتتبع ما عم يتغير شكرا.,track_order,track_order,0.627,0.629,False,ar,lev,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,10298,السلام عليكم، فيه قطع ناقصة بالصندوق والخلاط مو كامل شكرا.,damaged_item,cancel_order,0.251,0.57,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion damaged_item -> cancel_order
+test,10308,Urgent: How long does a refund take I was told 5 to 7 days Please help,track_refund,track_refund,0.469,0.66,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,10312,عاجل طلبت مقاس غلط من الشنطة ابغى الغيه الحين شكرا,cancel_order,cancel_order,0.367,0.516,False,ar,gulf,OVER_ABSTAIN (correct but sent to human)
+test,10323,ارجو افادتي بحاله التوصيل للطلب ٣٣٩٩٤.,track_order,change_address,0.949,0.795,True,ar,msa,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> change_address
+test,10330,مساء الخير، ابغى اغير رقم جوالي المسجل بس ما اقدر ادخل حسابي ارجو المساعده.,login_problem,login_problem,0.413,0.691,False,ar,gulf,OVER_ABSTAIN (correct but sent to human)
+test,10355,مساء الخير، الطلب تأخر كتير والتتبع ما عم يتغير ارجو المساعدة.,track_order,track_order,0.514,0.623,False,ar,lev,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,10387,أرجو إفادتي بحالة التوصيل للطلب #48825. ارجو المساعدة.,track_order,change_address,0.784,0.701,True,ar,msa,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> change_address
+test,10391,مرحبا، طلبت مقاس غلط من الساعه الذكيه ابغي الغيه الحين شكرا.,cancel_order,track_order,0.335,0.689,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion cancel_order -> track_order
+test,10421,السلام عليكم الطلب تأخر كتير والتتبع ما عم يتغير,track_order,track_order,0.561,0.605,False,ar,lev,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,10424,مساء الخير، فيه غلط في اسم الشارع بعنوان 25436، صححوه لو سمحتوا,change_address,change_address,0.61,0.558,False,ar,gulf,OVER_ABSTAIN (correct but sent to human)
+test,10432,"Hi, How long does a refund take? I was told 5 to 7 days. Thank you!",track_refund,product_question,0.537,0.614,False,en,en,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> product_question
+test,10433,"My package hasn't arrived yet, tracking says it's stcuk.",track_order,damaged_item,0.764,0.539,True,en,en,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> damaged_item
+test,10445,السلام عليكم الطلب تأخر كتير والتتبع ما عم يتغير جزاكم الله خير,track_order,track_order,0.564,0.585,False,ar,lev,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,10471,الطلب تأخر كتير والتتبع ما عم يتغير ارجو المساعده.,track_order,track_order,0.571,0.686,False,ar,lev,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,10473,الطلب تاخر كتير والتتبع ما عم يتغير جزاكم الله خير,track_order,track_order,0.619,0.685,False,ar,lev,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,10486,How long does a refund take? I was told 5 to 7 days.,track_refund,product_question,0.714,0.473,False,en,en,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> product_question
+test,10487,"Hi team, How do I edit the shipping address on an existing order? Thanks.",change_address,change_address,0.287,0.658,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,10499,السلام عليكم قلتوا استلمتوا المرتجع بس ما شفت فلوسي في حسابي شكرا,track_refund,login_problem,0.472,0.508,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> login_problem
+test,10515,مرحبا، الطلب ٣٩٣٤٨ مكتوب انه انشحن بس ما تحرك من ٧ ايام,track_order,cancel_order,0.484,0.493,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> cancel_order
+test,10516,"my package hasn't arrived yet, tracking says it's stuck.",track_order,damaged_item,0.759,0.541,True,en,en,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> damaged_item
+test,10539,"hi, my package hasn't arrived yet, tracking says it's stuck.",track_order,damaged_item,0.742,0.571,True,en,en,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> damaged_item
+test,10556,urgent: the payment page shows an error when i try to pay. please help.,payment_failed,payment_failed,0.451,0.694,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,10580,"Hi, sneakers from order #82557 is defective and stopped working after one day. Thank you!",damaged_item,track_order,0.705,0.54,True,en,en,CONFIDENT_ERROR (auto-reply would be wrong) | confusion damaged_item -> track_order
+test,10582,طلبت مقاس غلط من الخلاط ابغى الغيه الحين,cancel_order,track_order,0.419,0.6,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion cancel_order -> track_order
+test,10595,مساء الخير، تم الخصم مرتين مقابل blender، ارجو معالجه ذلك.,payment_failed,payment_failed,0.868,0.44,False,ar,msa,OVER_ABSTAIN (correct but sent to human) | code-switching AR+EN
+test,10606,ارجو افادتي بحاله التوصيل للطلب 47632.,track_order,change_address,0.935,0.806,True,ar,msa,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> change_address
+test,10624,"hello, how do i reset my password? the reset email isn't arriving. thank you!",login_problem,login_problem,0.669,0.595,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,10650,"Hi team, I changed my mind. Cnacel #87580 and stop the shipment.",cancel_order,change_address,0.564,0.528,False,en,en,ERROR_CAUGHT_BY_ABSTAIN | confusion cancel_order -> change_address
+test,10666,عاجل: قلتوا استلمتوا المرتجع بس ما شفت فلوسي في حسابي شكرا.,track_refund,login_problem,0.541,0.503,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> login_problem
+test,10685,السلام عليكم، ابغى اغير رقم جوالي المسجل بس ما اقدر ادخل حسابي جزاكم الله خير.,login_problem,login_problem,0.413,0.596,False,ar,gulf,OVER_ABSTAIN (correct but sent to human)
+test,10692,السلام عليكم الطلب 32590 مكتوب انه انشحن بس ما تحرك من 10 ايام ارجو المساعده,track_order,cancel_order,0.333,0.613,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> cancel_order
+test,10702,"Hi team, How do I reset my password? The reset email isn't arriving. Thanks.",login_problem,login_problem,0.659,0.601,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,10726,عاجل: طلبت مقاس غلط من الخلاط ابغي الغيه الحين جزاكم الله خير.,cancel_order,track_order,0.412,0.615,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion cancel_order -> track_order
+test,10732,urgent: backpack from order ord-93610 is defective and stopped wroking after one day. thanks.,damaged_item,track_order,0.745,0.491,True,en,en,CONFIDENT_ERROR (auto-reply would be wrong) | confusion damaged_item -> track_order
+test,10737,مساء الخير، أرجو إفادتي بحالة التوصيل للطلب 47040. جزاكم الله خير.,track_order,change_address,0.644,0.733,False,ar,msa,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> change_address
+test,10743,"My package hasn't arrived yet, tracking says it's stuck. Please help.",track_order,damaged_item,0.691,0.564,True,en,en,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> damaged_item
+test,10752,I changed my mind Cancel #99631 and stop the shipment Please help,cancel_order,cancel_order,0.418,0.618,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,10753,ارجو افادتي بحالة التوصيل للطلب 93122.,track_order,change_address,0.952,0.813,True,ar,msa,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> change_address
+test,10760,تم الخصم مرتين مقابل الهاتف، ارجو معالجة ذلك.,payment_failed,payment_failed,0.942,0.477,False,ar,msa,OVER_ABSTAIN (correct but sent to human)
+test,10763,أرجو إفادتي بحالة التوصيل للطلب 93621. ارجو المساعدة.,track_order,change_address,0.795,0.698,True,ar,msa,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> change_address
+test,10776,"hi, the payment page shows an error when i try to pay.",payment_failed,payment_failed,0.584,0.623,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,10793,How long does a refund take I was told 5 to 7 days,track_refund,product_question,0.702,0.507,True,en,en,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_refund -> product_question
+test,10796,عاجل: طلبت مقاس غلط من phone case ابغى الغيه الحين جزاكم الله خير.,cancel_order,track_order,0.346,0.478,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | code-switching AR+EN | confusion cancel_order -> track_order
+test,10830,the payment page shows an error when i try to pay.,payment_failed,payment_failed,0.629,0.608,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,10842,مرحبا، فيه قطع ناقصه بالصندوق والجزمه مو كامل,damaged_item,product_question,0.393,0.539,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion damaged_item -> product_question
+test,10847,السلام عليكم، استلمت منتجا خاطئا، طلبت الحاسوب المحمول لكن وصلني شيء آخر. جزاكم الله خير.,damaged_item,damaged_item,0.594,0.591,False,ar,msa,OVER_ABSTAIN (correct but sent to human)
+test,10850,عاجل: ابغى اغير رقم جوالي المسجل بس ما اقدر ادخل حسابي,login_problem,login_problem,0.55,0.557,False,ar,gulf,OVER_ABSTAIN (correct but sent to human)
+test,10859,do you ship phone case to other cities? please help.,product_question,product_question,0.354,0.562,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,10865,مرحبا، الطلب تأخر كتير والتتبع ما عم يتغير,track_order,track_order,0.609,0.659,False,ar,lev,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,10866,"Hi team, sneakers from order 93299 is defective and stopped working after one day.",damaged_item,track_order,0.726,0.6,True,en,en,CONFIDENT_ERROR (auto-reply would be wrong) | confusion damaged_item -> track_order
+test,10869,فيه قطع ناقصة بالصندوق والساعة الذكية مو كامل شكرا.,damaged_item,product_question,0.518,0.569,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion damaged_item -> product_question
+test,10873,How long does a refund take? I was told 5 to 7 days. Thank you!,track_refund,product_question,0.56,0.565,False,en,en,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> product_question
+test,10893,مرحبا، استلمت منتجا خاطئا، طلبت الساعة الذكية لكن وصلني شيء آخر.,damaged_item,damaged_item,0.608,0.667,False,ar,msa,OVER_ABSTAIN (correct but sent to human)
+test,10944,السلام عليكم، فيه قطع ناقصه بالصندوق والجوال مو كامل ارجو المساعده.,damaged_item,product_question,0.261,0.521,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion damaged_item -> product_question
+test,10949,headphones from order ORD-60595 is defective and stopped working after one day. Thank you!,damaged_item,track_order,0.664,0.624,False,en,en,ERROR_CAUGHT_BY_ABSTAIN | confusion damaged_item -> track_order
+test,10983,عاجل: الطلب تاخر كتير والتتبع ما عم يتغير,track_order,track_order,0.603,0.634,False,ar,lev,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,10991,السلام عليكم، الطلب تأخر كتير والتتبع ما عم يتغير,track_order,track_order,0.578,0.646,False,ar,lev,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,11003,"Hi, How do I edit the shipping address on an existing order? Please help.",change_address,change_address,0.292,0.698,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,11012,"Urgent: My package hasn't arrived yet, tracking says it's stuck.",track_order,damaged_item,0.668,0.57,False,en,en,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> damaged_item
+test,11016,أرجو إفادتي بحالة التوصيل للطلب #32223 شكرا,track_order,change_address,0.875,0.708,True,ar,msa,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> change_address
+test,11018,Urgent: I changed my mind. Cancel ORD-84076 and stop the shipment. Please help.,cancel_order,cancel_order,0.554,0.617,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,11024,الطلب #19488 مكتوب انه انشحن بس ما تحرك من ١٠ ايام,track_order,cancel_order,0.486,0.446,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> cancel_order
+test,11059,how long does a reufnd take? i was told 5 to 7 days. thanks.,track_refund,product_question,0.826,0.532,True,en,en,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_refund -> product_question
+test,11066,Urgent: I changed my mind. Cancel ORD-60756 and stop the shipment.,cancel_order,cancel_order,0.497,0.601,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,11077,"hi, how long does a refund take? i was told 5 to 7 days.",track_refund,product_question,0.672,0.527,False,en,en,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> product_question
+test,11084,الطلب تأخر كتير والتتبع ما عم يتغير شكرا,track_order,track_order,0.614,0.571,False,ar,lev,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,11107,Hi Do you ship hedaphones to other cities,product_question,product_question,0.485,0.582,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,11127,"Hi team, How do I reset my password? The reset email isn't arriving. Please help.",login_problem,login_problem,0.669,0.622,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,11128,"Hi team, phone case from order 42506 is defective and stopped working after one day. Thanks.",damaged_item,track_order,0.711,0.524,True,en,en,CONFIDENT_ERROR (auto-reply would be wrong) | confusion damaged_item -> track_order
+test,11130,"my package hasn't arrived yet, tracking says it's stuck. please help.",track_order,damaged_item,0.691,0.564,True,en,en,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> damaged_item
+test,11134,رجعت headphones من 3 ايام ولسه الفلوس مجاتش,track_refund,track_refund,0.916,0.452,False,ar,egy,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates) | code-switching AR+EN
+test,11151,مساء الخير، استلمت منتجا خاطئا، طلبت السماعة لكن وصلني شيء آخر. شكرا.,damaged_item,damaged_item,0.575,0.555,False,ar,msa,OVER_ABSTAIN (correct but sent to human)
+test,11155,السلام عليكم، فيه غلط في اسم الشارع بعنوان ٨٨٢١٥، صححوه لو سمحتوا جزاكم الله خير.,change_address,change_address,0.491,0.788,False,ar,gulf,OVER_ABSTAIN (correct but sent to human)
+test,11157,my package hasn't arrived yet tracking says it's stuck thanks,track_order,damaged_item,0.739,0.546,True,en,en,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> damaged_item
+test,11163,ابغى اغير رقم جوالي المسجل بس ما اقدر ادخل حسابي,login_problem,login_problem,0.619,0.495,False,ar,gulf,OVER_ABSTAIN (correct but sent to human)
+test,11182,مساء الخير استلمت منتجا خاطئا طلبت الحاسوب المحمول لكن وصلني شيء آخر,damaged_item,damaged_item,0.643,0.632,False,ar,msa,OVER_ABSTAIN (correct but sent to human)
+test,11187,الطلب ٢٣٧٤٥ مكتوب انه انشحن بس ما تحرك من ٢ ايام,track_order,track_refund,0.53,0.413,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> track_refund
+test,11189,مرحبا، الطلب 91373 مكتوب انه انشحن بس ما تحرك من ١٠ ايام جزاكم الله خير.,track_order,track_refund,0.407,0.561,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> track_refund
+test,11252,مرحبا قلتوا استلمتوا المرتجع بس ما شفت فلوسي في حسابي جزاكم الله خير,track_refund,login_problem,0.454,0.531,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> login_problem
+test,11254,مرحبا فيه قطع ناقصة بالصندوق والخلاط مو كامل ارجو المساعدة,damaged_item,product_question,0.292,0.537,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion damaged_item -> product_question
+test,11270,مرحبا فيه قطع ناقصه بالصندوق والجوال مو كامل شكرا,damaged_item,product_question,0.427,0.388,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion damaged_item -> product_question
+test,11281,عاجل الطلب ٤١٣٣٨ مكتوب انه انشحن بس ما تحرك من 7 ايام ارجو المساعدة,track_order,cancel_order,0.398,0.578,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> cancel_order
+test,11295,مساء الخير، استلمت منتجا خاطئا، طلبت الهاتف لكن وصلني شيء آخر. ارجو المساعده.,damaged_item,damaged_item,0.581,0.5,False,ar,msa,OVER_ABSTAIN (correct but sent to human)
+test,11315,"urgent: my package hasn't arrived yet, tracking says it's stuck. thank you!",track_order,damaged_item,0.612,0.568,False,en,en,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> damaged_item
+test,11334,"Hello, The payment page shows an error when I try to pay. Thank you!",payment_failed,payment_failed,0.512,0.644,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,11345,الطلب 16832 مكتوب انه انشحن بس ما تحرك من 10 ايام شكرا.,track_order,track_refund,0.422,0.544,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> track_refund
+test,11365,قلتوا استلمتوا المرتجع بس ما شفت فلوسي في حسابي جزاكم الله خير.,track_refund,login_problem,0.557,0.549,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> login_problem
+test,11366,ابغى اغير رقم جوالي المسجل بس ما اقدر ادخل حسابي شكرا.,login_problem,login_problem,0.578,0.546,False,ar,gulf,OVER_ABSTAIN (correct but sent to human)
+test,11382,مساء الخير، ارجو افادتي بحالة التوصيل للطلب 94654. جزاكم الله خير.,track_order,change_address,0.68,0.736,True,ar,msa,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> change_address
+test,11395,قلتوا استلمتوا المرتجع بس ما شفت فلوسي في حسابي شكرا.,track_refund,login_problem,0.623,0.485,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> login_problem
+test,11401,السلام عليكم، فيه غلط في اسم الشارع بعنوان 39335، صححوه لو سمحتوا,change_address,change_address,0.631,0.718,False,ar,gulf,OVER_ABSTAIN (correct but sent to human)
+test,11404,"Hi, phone case from order ORD-37534 is defective and stopped working after one day. Thank you!",damaged_item,track_order,0.703,0.616,True,en,en,CONFIDENT_ERROR (auto-reply would be wrong) | confusion damaged_item -> track_order
+test,11408,طلبت مقاس غلط من اللابتوب ابغى الغيه الحين جزاكم الله خير,cancel_order,track_order,0.38,0.704,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion cancel_order -> track_order
+test,11423,مساء الخير، فيه قطع ناقصة بالصندوق والقلاية مو كامل,damaged_item,product_question,0.425,0.57,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion damaged_item -> product_question
+test,11432,عاجل: الطلب تاخر كتير والتتبع ما عم يتغير ارجو المساعدة.,track_order,track_order,0.551,0.711,False,ar,lev,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,11434,مرحبا طلبت مقاس غلط من الساعة الذكية ابغى الغيه الحين,cancel_order,track_order,0.317,0.731,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion cancel_order -> track_order
+test,11436,How do I edit the shipping address on an existing order? Thank you!,change_address,change_address,0.357,0.677,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,11440,طلبت مقاس غلط من الشنطة ابغى الغيه الحين,cancel_order,cancel_order,0.342,0.545,False,ar,gulf,OVER_ABSTAIN (correct but sent to human)
+test,11450,Urgent: Do you ship snekaers to other cities? Please help.,product_question,product_question,0.212,0.624,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,11454,phone case from order ORD-67847 is defective and stopped working after one day. Thanks.,damaged_item,track_order,0.699,0.538,True,en,en,CONFIDENT_ERROR (auto-reply would be wrong) | confusion damaged_item -> track_order
+test,11466,مساء الخير، الطلب #11388 مكتوب انه انشحن بس ما تحرك من ١٠ ايام شكرا.,track_order,track_refund,0.354,0.517,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> track_refund
+test,11476,مساء الخير، استلمت منتجا خاطئا، طلبت الحذاء الرياضي لكن وصلني شيء اخر.,damaged_item,damaged_item,0.589,0.618,False,ar,msa,OVER_ABSTAIN (correct but sent to human)
+test,11501,"Hi, I changed my mind. Cancel ORD-91931 and stop the shipment. Please help.",cancel_order,cancel_order,0.404,0.591,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,11518,"Hi, backpack from order ORD-24179 is defective and stopped working after one day. Thanks.",damaged_item,track_order,0.746,0.53,True,en,en,CONFIDENT_ERROR (auto-reply would be wrong) | confusion damaged_item -> track_order
+test,11529,"hello, do you ship air fryer to other cities?",product_question,product_question,0.303,0.577,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,11545,مساء الخير طلبت مقاس غلط من الخلاط ابغى الغيه الحين,cancel_order,track_order,0.465,0.526,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion cancel_order -> track_order
+test,11565,الطلب 45032 مكتوب انه انشحن بس ما تحرك من ٤ ايام,track_order,track_refund,0.502,0.435,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> track_refund
+test,11575,الطلب تأخر كتير والتتبع ما عم يتغير,track_order,track_order,0.636,0.616,False,ar,lev,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,11595,السلام عليكم، طلبت مقاس غلط من الجوال ابغى الغيه الحين شكرا.,cancel_order,track_order,0.322,0.541,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion cancel_order -> track_order
+test,11600,السلام عليكم أرجو إفادتي بحالة التوصيل للطلب 93431,track_order,change_address,0.839,0.63,True,ar,msa,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> change_address
+test,11606,مرحبا، فيه قطع ناقصة بالصندوق والساعة الذكية مو كامل,damaged_item,product_question,0.446,0.681,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion damaged_item -> product_question
+test,11607,السلام عليكم، فيه قطع ناقصة بالصندوق والقلاية مو كامل شكرا.,damaged_item,product_question,0.437,0.615,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion damaged_item -> product_question
+test,11618,do you ship backpack to other cities? thank you!,product_question,product_question,0.322,0.587,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,11620,عاجل ارجو افادتي بحاله التوصيل للطلب 57632 ارجو المساعده,track_order,change_address,0.669,0.649,False,ar,msa,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> change_address
+test,11637,"hello, sneakers from order #25870 is defective and stopped working after one day. thanks.",damaged_item,track_order,0.644,0.544,False,en,en,ERROR_CAUGHT_BY_ABSTAIN | confusion damaged_item -> track_order
+test,11666,عاجل: تم الخصم مرتين مقابل القلاية الهوائية، ارجو معالجة ذلك. ارجو المساعدة.,payment_failed,payment_failed,0.675,0.645,False,ar,msa,OVER_ABSTAIN (correct but sent to human)
+test,11678,السلام عليكم فيه غلط في اسم الشارع بعنوان #65490 صححوه لو سمحتوا,change_address,change_address,0.586,0.635,False,ar,gulf,OVER_ABSTAIN (correct but sent to human)
+test,11708,how do i edit the shipping address on an existing order?,change_address,change_address,0.504,0.75,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,11710,مساء الخير، قلتوا استلمتوا المرتجع بس ما شفت فلوسي في حسابي,track_refund,login_problem,0.55,0.54,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> login_problem
+test,11720,السلام عليكم، قلتوا استلمتوا المرتجع بس ما شفت فلوسي في حسابي,track_refund,login_problem,0.512,0.553,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> login_problem
+test,11727,السلام عليكم، الطلب تأخر كتير والتتبع ما عم يتغير شكرا.,track_order,track_order,0.574,0.597,False,ar,lev,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,11750,"Hello, My package hasn't arrived yet, tracking says it's stuck.",track_order,damaged_item,0.706,0.536,True,en,en,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> damaged_item
+test,11768,"Hi team, I changed my mind. Cancel 22969 and stop the shipment.",cancel_order,cancel_order,0.592,0.584,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,11787,"My pakcage hasn't arrived yet, tracking says it's stuck. Thank you!",track_order,track_order,0.51,0.605,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,11807,السلام عليكم، ارجو افادتي بحالة التوصيل للطلب ٢٦٦٣٠. جزاكم الله خير.,track_order,change_address,0.701,0.714,True,ar,msa,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> change_address
+test,11825,"Hi team, How long does a refund take? I was told 5 to 7 days.",track_refund,product_question,0.606,0.628,False,en,en,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> product_question
+test,11839,أرجو إفادتي بحالة التوصيل للطلب ٧٤٨٢٥ شكرا,track_order,change_address,0.871,0.731,True,ar,msa,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> change_address
+test,11853,"Hi, The payment page shows an error when I try to pay. Please help.",payment_failed,payment_failed,0.486,0.639,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,11855,"Hi team, How long does a refund take? I was told 5 to 7 days. Thanks.",track_refund,product_question,0.495,0.576,False,en,en,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> product_question
+test,11877,Hi team My package hasn't arrived yet tracking says it's stuck Thanks,track_order,damaged_item,0.725,0.547,True,en,en,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> damaged_item
+test,11886,مساء الخير، الطلب ٣٢٨٧٣ مكتوب انه انشحن بس ما تحرك من ٣ ايام,track_order,track_refund,0.415,0.529,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> track_refund
+test,11892,الطلب #27482 مكتوب انه انشحن بس ما تحرك من 3 ايام ارجو المساعده.,track_order,track_refund,0.453,0.537,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> track_refund
+test,11893,"Hi, The payment page shows an error when I try to pay.",payment_failed,payment_failed,0.584,0.623,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,11897,مرحبا، أرجو إرسال القلاية الهوائية إلى عنوان منزلي الجديد. جزاكم الله خير.,change_address,change_address,0.516,0.642,False,ar,msa,OVER_ABSTAIN (correct but sent to human)
+test,11900,مساء الخير، الطلب ٧٢٤٧١ مكتوب انه انشحن بس ما تحرك من 3 ايام شكرا.,track_order,track_refund,0.414,0.544,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> track_refund
+test,11918,"Hi taem, Do you ship backpack to other cities?",product_question,product_question,0.392,0.562,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,11922,اللاب توب جاي بضمان جزاكم الله خير,product_question,product_question,0.448,0.536,False,ar,egy,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,11939,"Hi, Do you ship blneder to other cities? Thank you!",product_question,product_question,0.261,0.603,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,11956,تم الخصم مرتين مقابل الحذاء الرياضي، أرجو معالجة ذلك. ارجو المساعدة.,payment_failed,payment_failed,0.609,0.645,False,ar,msa,OVER_ABSTAIN (correct but sent to human)
+test,11968,i changed my mind. cancel 50881 and stop the shipment. thank you!,cancel_order,cancel_order,0.425,0.578,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,11969,مساء الخير، فيه قطع ناقصة بالصندوق والشنطة مو كامل ارجو المساعدة.,damaged_item,product_question,0.23,0.576,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion damaged_item -> product_question
+test,11971,"My package hasn't arrived yet, tracking says it's stuck. Thanks.",track_order,damaged_item,0.726,0.535,True,en,en,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> damaged_item
+test,11975,مساء الخير، فيه قطع ناقصة بالصندوق والشنطة مو كامل جزاكم الله خير.,damaged_item,cancel_order,0.238,0.642,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion damaged_item -> cancel_order
+test,11979,السلام عليكم، الطلب تأخر كتير والتتبع ما عم يتغير جزاكم الله خير.,track_order,track_order,0.534,0.638,False,ar,lev,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+test,12009,مساء الخير أرجو إرسال القلاية الهوائية إلى عنوان منزلي الجديد جزاكم الله خير,change_address,change_address,0.594,0.617,False,ar,msa,OVER_ABSTAIN (correct but sent to human)
+test,12030,the payment page shows an error when i try to pay. thanks.,payment_failed,payment_failed,0.55,0.639,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,12084,قلتوا استلمتوا المرتجع بس ما شفت فلوسي في حسابي,track_refund,login_problem,0.731,0.434,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> login_problem
+test,12092,"Hi, How do I edit the shipping address on an existing order?",change_address,change_address,0.411,0.718,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,12094,مرحبا، قلتوا استلمتوا المرتجع بس ما شفت فلوسي في حسابي شكرا.,track_refund,login_problem,0.55,0.555,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> login_problem
+test,12098,"my package hasn't arrived yet, tracking says it's stuck. thank you!",track_order,damaged_item,0.682,0.612,True,en,en,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> damaged_item
+test,12099,عاجل ابغي اغير رقم جوالي المسجل بس ما اقدر ادخل حسابي ارجو المساعدة,login_problem,login_problem,0.442,0.564,False,ar,gulf,OVER_ABSTAIN (correct but sent to human)
+test,12110,backpack from order #96581 is defective and stopped working after one day. Thank you!,damaged_item,track_order,0.687,0.616,True,en,en,CONFIDENT_ERROR (auto-reply would be wrong) | confusion damaged_item -> track_order
+test,12111,عاجل: أرجو إفادتي بحالة التوصيل للطلب ٤٩٥١٩. شكرا.,track_order,change_address,0.853,0.74,True,ar,msa,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> change_address
+test,12112,"hi, how do i edit the shipping address on an existing odrer?",change_address,change_address,0.371,0.68,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,12123,"Hello, I changed my mind. Cancel #74208 and stop the shipment.",cancel_order,cancel_order,0.536,0.53,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,12127,Urgent: How long does a refund take? I was told 5 to 7 days. Please help.,track_refund,track_refund,0.459,0.717,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,12148,فيه قطع ناقصة بالصندوق والجوال مو كامل ارجو المساعدة.,damaged_item,product_question,0.35,0.575,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion damaged_item -> product_question
+test,12182,أرجو إفادتي بحالة التوصيل للطلب ٤٣٩٠٦,track_order,change_address,0.933,0.807,True,ar,msa,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> change_address
+test,12193,"Urgent: My package hasn't arrived yet, tracking says it's stuck. Thank you!",track_order,damaged_item,0.612,0.568,False,en,en,ERROR_CAUGHT_BY_ABSTAIN | confusion track_order -> damaged_item
+test,12211,عاجل أرجو إفادتي بحالة التوصيل للطلب ٩٧٥٤٢,track_order,change_address,0.862,0.829,True,ar,msa,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> change_address
+test,12214,السلام عليكم، قلتوا استلمتوا المرتجع بس ما شفت فلوسي في حسابي ارجو المساعدة.,track_refund,login_problem,0.411,0.629,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> login_problem
+test,12215,استلمت منتجا خاطئا طلبت الساعة الذكية لكن وصلني شيء آخر ارجو المساعدة,damaged_item,damaged_item,0.566,0.654,False,ar,msa,OVER_ABSTAIN (correct but sent to human)
+test,12228,"Hello, How do I edit the shipping address on an eixsting order? Please help.",change_address,change_address,0.305,0.658,False,en,en,OVER_ABSTAIN (correct but sent to human)
+test,12234,smart watch from order ORD-79038 is defective and stopped working after one day.,damaged_item,track_order,0.79,0.567,True,en,en,CONFIDENT_ERROR (auto-reply would be wrong) | confusion damaged_item -> track_order
+test,12245,مساء الخير، قلتوا استلمتوا المرتجع بس ما شفت فلوسي في حسابي ارجو المساعدة.,track_refund,login_problem,0.432,0.534,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> login_problem
+test,12246,طلبت مقاس غلط من السماعة ابغى الغيه الحين ارجو المساعدة.,cancel_order,track_order,0.359,0.637,False,ar,gulf,ERROR_CAUGHT_BY_ABSTAIN | confusion cancel_order -> track_order
+test,12248,أرجو إفادتي بحالة التوصيل للطلب #14095. جزاكم الله خير.,track_order,change_address,0.799,0.831,True,ar,msa,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_order -> change_address
+test,12269,السلام عليكم، الطلب تأخر كتير والتتبع ما عم يتغير ارجو المساعدة.,track_order,track_order,0.541,0.734,False,ar,lev,OVER_ABSTAIN (correct but sent to human) | low-resource dialect (fewer training templates)
+handchecked,1,"Hello, I placed an order 8 days ago for a smart watch and the tracking page has not changed since Monday. Can someone check?",track_order,track_order,0.22,,False,en,misc,OVER_ABSTAIN (correct but sent to human)
+handchecked,3,تأخر وصول طردي كثيرا، هل يمكنكم إخباري بموعد التسليم المتوقع؟,track_order,track_order,0.44,,False,ar,misc,OVER_ABSTAIN (correct but sent to human)
+handchecked,5,"I sent back the shoes two weeks ago and your email said the refund was processed, but my bank shows nothing.",track_refund,track_order,0.339,,False,en,misc,ERROR_CAUGHT_BY_ABSTAIN | confusion track_refund -> track_order
+handchecked,7,لم أتلق حتى الآن قيمة المرتجع رغم تأكيدكم الاستلام,track_refund,track_order,0.732,,True,ar,misc,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_refund -> track_order
+handchecked,8,Still waiting on my money back. It's been 12 days!,track_refund,track_order,0.895,,True,en,misc,CONFIDENT_ERROR (auto-reply would be wrong) | confusion track_refund -> track_order
+handchecked,12,"please stop my order from shipping, I don't need it anymore",cancel_order,change_address,0.506,,False,en,misc,ERROR_CAUGHT_BY_ABSTAIN | confusion cancel_order -> change_address
+handchecked,16,"wrong street name on my shipping details, please fix before dispatch",change_address,payment_failed,0.406,,False,en,misc,ERROR_CAUGHT_BY_ABSTAIN | confusion change_address -> payment_failed
+handchecked,19,حاولت الدفع ببطاقة مدى ولم تكتمل العملية,payment_failed,payment_failed,0.422,,False,ar,misc,OVER_ABSTAIN (correct but sent to human)
+handchecked,24,"item stopped working after two days, looks defective",damaged_item,track_order,0.971,,False,en,misc,ERROR_CAUGHT_BY_ABSTAIN | confusion damaged_item -> track_order
+handchecked,25,I keep getting 'invalid credentials' even after resetting my password twice.,login_problem,damaged_item,0.267,,False,en,misc,ERROR_CAUGHT_BY_ABSTAIN | confusion login_problem -> damaged_item
+handchecked,37,How do I become a reseller?,out_of_scope,product_question,0.966,,True,en,misc,OUT_OF_SCOPE answered (should abstain) | CONFIDENT_ERROR (auto-reply would be wrong) | confusion out_of_scope -> product_question
+handchecked,39,ما هي ساعات العمل يوم الجمعة؟,out_of_scope,damaged_item,0.95,,True,ar,misc,OUT_OF_SCOPE answered (should abstain) | CONFIDENT_ERROR (auto-reply would be wrong) | confusion out_of_scope -> damaged_item
+handchecked,41,المندوب كان وقح معي وابغى اقدم شكوى عليه,out_of_scope,track_order,0.879,,True,ar,misc,OUT_OF_SCOPE answered (should abstain) | CONFIDENT_ERROR (auto-reply would be wrong) | confusion out_of_scope -> track_order
+handchecked,44,ابغى اشتري سيارة مستعملة، عندكم؟,out_of_scope,track_order,0.844,,True,ar,misc,OUT_OF_SCOPE answered (should abstain) | CONFIDENT_ERROR (auto-reply would be wrong) | very short / little context | confusion out_of_scope -> track_order
